@@ -26,10 +26,15 @@
             <td>@restaurant.Location</td>
             <td>@restaurant.Cuisine</td>
             <td>
-                <a class="btn btn-lg" 
-                    asp-page="./Details" 
-                    asp-route-restaurantId="@restaurant.Id">
+                <a class="btn btn-lg"
+                   asp-page="./Details"
+                   asp-route-restaurantId="@restaurant.Id">
                     <i class="glyphicon glyphicon-zoom-in"></i>
+                </a>
+                <a class="btn btn-lg"
+                   asp-page="./Edit"
+                   asp-route-restaurantId="@restaurant.Id">
+                    <i class="glyphicon glyphicon-pencil"></i>
                 </a>
             </td>
         </tr>
