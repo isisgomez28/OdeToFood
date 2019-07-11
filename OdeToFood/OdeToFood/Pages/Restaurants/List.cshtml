@@ -1,6 +1,7 @@
 ﻿@page
 @model ListModel
 @{
+    ViewData["Title"] = "Restaurants";
 }
 
 <h1>Restaurants</h1>
@@ -18,7 +19,7 @@
     </div>
 </form>
 
-<table class="table">
+@*<table class="table">
     @foreach (var restaurant in Model.Restaurants)
     {
         <tr>
@@ -36,10 +37,20 @@
                    asp-route-restaurantId="@restaurant.Id">
                     <i class="glyphicon glyphicon-pencil"></i>
                 </a>
+                <a class="btn btn-lg"
+                   asp-page="./Delete"
+                   asp-route-restaurantId="@restaurant.Id">
+                    <i class="glyphicon glyphicon-trash"></i>
+                </a>
             </td>
         </tr>
     }
-</table>
+</table>*@
+
+@foreach (var restaurant in Model.Restaurants)
+{
+    <partial name="_Summary" model="restaurant" />
+}
 
 <a asp-page="./Edit" class="btn btn-default">Add New</a>
 
