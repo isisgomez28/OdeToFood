@@ -38,6 +38,11 @@ namespace OdeToFood.Data
             return restaurant;
         }
 
+        public int GetCountOfRestaurants()
+        {
+            return context.Restaurants.Count();
+        }
+
         public Restaurant GetRestaurantById(int id)
         {
             return context.Restaurants.Find(id);

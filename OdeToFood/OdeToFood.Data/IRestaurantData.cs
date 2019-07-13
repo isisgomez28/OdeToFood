@@ -11,5 +11,6 @@ namespace OdeToFood.Data
         Restaurant GetRestaurantById(int id);
         IEnumerable<Restaurant> GetRestaurantsByName(string name);
         Restaurant Update(Restaurant updatedRestaurant);
+        int GetCountOfRestaurants();
     }
 }
